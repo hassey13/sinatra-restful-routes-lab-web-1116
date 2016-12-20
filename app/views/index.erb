@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Recipes Homepage</title>
+</head>
+<body>
+
+	<div style="padding: 25px; margin: 0 auto; width: 500px; text-align: center">
+		<a href="/recipes/new" type="button">Create a recipe</a>
+	</div>
+	<br>
+  <div style="padding: 25px; margin: 0 auto; border: 1px solid black; width: 500px; text-align: left">
+  	<ol>
+	<% @recipes.each do |recipe| %>
+		
+			<li><a href=<%="/recipes/#{recipe.id}"%>><%= recipe.name %></a></li>
+		
+	<% end %>
+		</ol>
+	</div>
+
+</body>
+</html>
